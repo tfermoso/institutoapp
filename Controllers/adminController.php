@@ -122,14 +122,15 @@ class AdminController extends Controller
         $datos["optionsProfesores"]=$optionsProfesores;
 
         if(isset($_POST["nombre"])){
+
             $conn = new Database();
-            $alumno = new Alumno($conn->getConnection());
+            $curso = new Curso($conn->getConnection());
             $datos=array();
-            $datos["expediente"]=$_POST["expediente"];
+            $datos["codigo"]=$_POST["codigo"];
             $datos["nombre"]=$_POST["nombre"];
-            $datos["apellidos"]=$_POST["apellidos"];
-            $datos["fecha_nacimiento"]=$_POST["fecha_nacimiento"];
-            $alumno->insertar($datos);
+            $datos["idprofesores"]=$_POST["idprofesores"];
+            $datos["idalumnos"]=$_POST["idalumnos"];
+            $curso->insertar($datos);
             header("Location:".URL_PATH."/admin");
         }
 

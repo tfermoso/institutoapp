@@ -8,6 +8,7 @@ require_once("./Models/Mensaje.php");
 require_once("./Models/Profesor.php");
 require_once("./controllers/controller.php");
 require_once("./Models/Alumno.php");
+require_once("./Models/Curso.php");
 
 
 
