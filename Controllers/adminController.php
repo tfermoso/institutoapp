@@ -75,4 +75,64 @@ class AdminController extends Controller
 
         $this->render("Admin/altaprofesor",$datos,"Admin/layout/admin");
     }
+
+    public function altaalumno(){
+
+        $datos=array();
+        $datos["mensajes"]=$this->mensajes;
+        $datos["user_name"]=$_SESSION["nombre"];
+        if(isset($_POST["nombre"])){
+            $conn = new Database();
+            $alumno = new Alumno($conn->getConnection());
+            $datos=array();
+            $datos["expediente"]=$_POST["expediente"];
+            $datos["nombre"]=$_POST["nombre"];
+            $datos["apellidos"]=$_POST["apellidos"];
+            $datos["fecha_nacimiento"]=$_POST["fecha_nacimiento"];
+            $alumno->insertar($datos);
+            header("Location:".URL_PATH."/admin");
+        }
+
+        $this->render("Admin/altaalumno",$datos,"Admin/layout/admin");
+    }
+
+    
+    public function curso(){
+
+        $datos=array();
+        $datos["mensajes"]=$this->mensajes;
+        $datos["user_name"]=$_SESSION["nombre"];
+        //Obtenemos los Alumnos;
+        $conn = new Database();
+        $alumno = new Alumno($conn->getConnection());
+        $alumnos=$alumno->getAll();
+        $optionsAlumnos = "";
+        foreach ($alumnos as $key => $value) {
+            $optionsAlumnos .= "<option value=" . $value['idalumnos'] . ">" . $value['nombre'] . "</option>";
+        }
+        $datos["optionsAlumnos"]=$optionsAlumnos;
+        //Obtenemos los profesores
+        $conn = new Database();
+        $profesor = new Profesor($conn->getConnection());
+        $profesores=$profesor->getAll();
+        $optionsProfesores = "";
+        foreach ($profesores as $key => $value) {
+            $optionsProfesores .= "<option value=" . $value['idprofesores'] . ">" . $value['nombre'] . "</option>";
+        }
+        $datos["optionsProfesores"]=$optionsProfesores;
+
+        if(isset($_POST["nombre"])){
+            $conn = new Database();
+            $alumno = new Alumno($conn->getConnection());
+            $datos=array();
+            $datos["expediente"]=$_POST["expediente"];
+            $datos["nombre"]=$_POST["nombre"];
+            $datos["apellidos"]=$_POST["apellidos"];
+            $datos["fecha_nacimiento"]=$_POST["fecha_nacimiento"];
+            $alumno->insertar($datos);
+            header("Location:".URL_PATH."/admin");
+        }
+
+        $this->render("Admin/altacurso",$datos,"Admin/layout/admin");
+    }
 }

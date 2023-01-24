@@ -157,10 +157,22 @@
               <ul class="nav nav-treeview">
                 <li class="nav-item">
                   <a href="<?= URL_PATH ?>/admin/altaprofesor" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
+                  <i class="fa-solid fa-person-chalkboard"></i>
                     <p>Profesores</p>
                   </a>
-                </li>                
+                </li>  
+                <li class="nav-item">
+                  <a href="<?= URL_PATH ?>/admin/altaalumno" class="nav-link">
+                  <i class="fa-solid fa-graduation-cap"></i>
+                    <p>Alumnos</p>
+                  </a>
+                </li>  
+                <li class="nav-item">
+                  <a href="<?= URL_PATH ?>/admin/curso" class="nav-link">
+                  <i class="fa-brands fa-discourse"></i>
+                    <p>Cursos</p>
+                  </a>
+                </li>             
               </ul>
             </li>
             <li class="nav-item">
@@ -239,7 +251,7 @@
         <div class="container-fluid">
           <div class="row mb-2">
             <div class="col-sm-6">
-              <h1 class="m-0">Dashboard v2</h1>
+              <h1 class="m-0">Instituto APP</h1>
             </div><!-- /.col -->
             <div class="col-sm-6">
               <ol class="breadcrumb float-sm-right">
