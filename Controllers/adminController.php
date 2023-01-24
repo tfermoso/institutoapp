@@ -57,9 +57,22 @@ class AdminController extends Controller
     }
 
     public function altaprofesor(){
+
         $datos=array();
         $datos["mensajes"]=$this->mensajes;
         $datos["user_name"]=$_SESSION["nombre"];
+        if(isset($_POST["nombre"])){
+            $conn = new Database();
+            $profesor = new Profesor($conn->getConnection());
+            $datos=array();
+            $datos["dni"]=$_POST["dni"];
+            $datos["nombre"]=$_POST["nombre"];
+            $datos["direccion"]=$_POST["direccion"];
+            $datos["telefono"]=$_POST["telefono"];
+            $profesor->insertar($datos);
+            header("Location:".URL_PATH."/admin");
+        }
+
         $this->render("Admin/altaprofesor",$datos,"Admin/layout/admin");
     }
 }
