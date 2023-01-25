@@ -239,8 +239,8 @@
   <script src="<?= URL_PATH ?>/Assets/js/jquery.overlayScrollbars.min.js"></script>
   <!-- AdminLTE App -->
   <script src="<?= URL_PATH ?>/Assets/js/adminlte.min.js"></script>
+  <script src="<?= URL_PATH ?>/Assets/js/admin.js"></script>
 
-  <script src="<?= URL_PATH ?>/Assets/js/dashboard2.js"></script>
 </body>
 
 </html>
