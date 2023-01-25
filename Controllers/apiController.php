@@ -32,4 +32,10 @@ class ApiController
         $respuesta["msg"]="mensaje enviado";
         echo json_encode($respuesta);
     }
+
+    public function alumnoscurso($id){
+        $conn = new Database();
+        $cursoDTO = new CursoDTO($conn->getConnection());
+        echo json_encode($cursoDTO->getAlmunosNoMatriculados($id));
+    }
 }

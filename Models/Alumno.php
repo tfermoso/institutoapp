@@ -4,4 +4,6 @@ class Alumno extends Orm{
     {
         parent::__construct("id", "alumnos", $conn);
     }
+
+    
 }
