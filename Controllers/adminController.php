@@ -136,4 +136,23 @@ class AdminController extends Controller
 
         $this->render("Admin/altacurso",$datos,"Admin/layout/admin");
     }
+
+    public function matricular(){
+
+        $datos=array();
+        $datos["mensajes"]=$this->mensajes;
+        $datos["user_name"]=$_SESSION["nombre"];
+       //Obtenemos los Alumnos;
+       $conn = new Database();
+       $curso = new Curso($conn->getConnection());
+       $cursos=$curso->getAll();
+       $optionsCursos = "";
+       foreach ($cursos as $key => $value) {
+           $optionsCursos .= "<option value=" . $value['idcursos'] . ">" . $value['nombre'] . "</option>";
+       }
+       $datos["optionsCursos"]=$optionsCursos;
+       
+
+        $this->render("Admin/matricular",$datos,"Admin/layout/admin");
+    }
 }

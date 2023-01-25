@@ -172,71 +172,15 @@
                   <i class="fa-brands fa-discourse"></i>
                     <p>Cursos</p>
                   </a>
-                </li>             
+                </li> 
+                <li class="nav-item">
+                  <a href="<?= URL_PATH ?>/admin/matricular" class="nav-link">
+                  <i class="fa-brands fa-discourse"></i>
+                    <p>Matricular</p>
+                  </a>
+                </li>            
               </ul>
             </li>
-            <li class="nav-item">
-              <a href="pages/widgets.html" class="nav-link">
-                <i class="nav-icon fas fa-th"></i>
-                <p>
-                  Widgets
-                  <span class="right badge badge-danger">New</span>
-                </p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">
-                <i class="nav-icon fas fa-copy"></i>
-                <p>
-                  Layout Options
-                  <i class="fas fa-angle-left right"></i>
-                  <span class="badge badge-info right">6</span>
-                </p>
-              </a>
-              <ul class="nav nav-treeview">
-                <li class="nav-item">
-                  <a href="pages/layout/top-nav.html" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Top Navigation</p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="pages/layout/top-nav-sidebar.html" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Top Navigation + Sidebar</p>
-                  </a>
-                </li>              
-                <li class="nav-item">
-                  <a href="pages/layout/collapsed-sidebar.html" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Collapsed Sidebar</p>
-                  </a>
-                </li>
-              </ul>
-            </li>
-            
-          
-           
-           
-            <li class="nav-header">EXAMPLES</li>
-            <li class="nav-item">
-              <a href="pages/calendar.html" class="nav-link">
-                <i class="nav-icon fas fa-calendar-alt"></i>
-                <p>
-                  Calendar
-                  <span class="badge badge-info right">2</span>
-                </p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="pages/gallery.html" class="nav-link">
-                <i class="nav-icon far fa-image"></i>
-                <p>
-                  Gallery
-                </p>
-              </a>
-            </li>
-
           </ul>
         </nav>
         <!-- /.sidebar-menu -->
