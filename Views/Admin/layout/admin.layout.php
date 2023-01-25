@@ -16,7 +16,8 @@
   <link rel="stylesheet" href="<?= URL_PATH ?>/Assets/css/OverlayScrollbars.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="<?= URL_PATH ?>/Assets/css/adminlte.min.css">
-
+  <link rel="stylesheet" href="http://cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css">
+  
 </head>
 
 <body class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
@@ -240,7 +241,7 @@
   <!-- AdminLTE App -->
   <script src="<?= URL_PATH ?>/Assets/js/adminlte.min.js"></script>
   <script src="<?= URL_PATH ?>/Assets/js/admin.js"></script>
-
+<script src="http://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
 </body>
 
 </html>
