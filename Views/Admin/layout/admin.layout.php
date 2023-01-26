@@ -176,7 +176,7 @@
                 </li> 
                 <li class="nav-item">
                   <a href="<?= URL_PATH ?>/admin/matricular" class="nav-link">
-                  <i class="fa-brands fa-discourse"></i>
+                  <i class="fa-solid fa-pen-to-square"></i>
                     <p>Matricular</p>
                   </a>
                 </li>            
@@ -200,8 +200,8 @@
             </div><!-- /.col -->
             <div class="col-sm-6">
               <ol class="breadcrumb float-sm-right">
-                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                <li class="breadcrumb-item active">Dashboard v2</li>
+                <li class="breadcrumb-item"><a href='<?=URL_PATH."/".$controller?>'><?=$controller?></a></li>
+                <li class="breadcrumb-item active"><?=$action?></li>
               </ol>
             </div><!-- /.col -->
           </div><!-- /.row -->
@@ -236,10 +236,9 @@
   <script src="<?= URL_PATH ?>/Assets/js/jquery.min.js"></script>
   <!-- Bootstrap -->
   <script src="<?= URL_PATH ?>/Assets/js/bootstrap.bundle.min.js"></script>
-  <!-- overlayScrollbars -->
-  <script src="<?= URL_PATH ?>/Assets/js/jquery.overlayScrollbars.min.js"></script>
+ 
   <!-- AdminLTE App -->
-  <script src="<?= URL_PATH ?>/Assets/js/adminlte.min.js"></script>
+  <script src="<?= URL_PATH ?>/Assets/js/adminlte.js"></script>
   <script src="<?= URL_PATH ?>/Assets/js/admin.js"></script>
 <script src="http://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
 </body>
